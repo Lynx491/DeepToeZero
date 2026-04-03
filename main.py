@@ -97,16 +97,16 @@ class Tictactoe(gym.Env):
                 reward = self.İLLEGALHAMLE
                 done = True
             else:
-                if len(self.engine_list+self.rakip_list) <9:
-                    if self.kontrol(self.engine_list): #kazanma kaybetme beraberlik kontrolü
-                        reward = self.ÖDÜL
-                        done = True
-                    else:  
+                if self.kontrol(self.engine_list): #kazanma kaybetme beraberlik kontrolü
+                    reward = self.ÖDÜL
+                    done = True
+                else:  
+                    if len(self.engine_list+self.rakip_list) <9:
                         done = False
                         reward = 0
-                else:
-                    done = True
-                    reward = self.BERABERE
+                    else:
+                        done = True
+                        reward = self.BERABERE
 
 
 
@@ -126,17 +126,17 @@ class Tictactoe(gym.Env):
                         self.rakip_list.append(self.karşı_hamle)# hamleyi karşı tarafa ekler
             else:
                 self.rakip_list.append(self.karşı_hamle)# oyuncu ise zaten hamle seçilmiştir
-            
-            if len(self.engine_list+self.rakip_list) <9: #0,1,2...8 len > 1,2,3..9
-                if self.kontrol(self.rakip_list):
-                    reward = self.CEZA
-                    done = True
-                else:
+
+            if self.kontrol(self.rakip_list):
+                reward = self.CEZA
+                done = True
+            else:
+                if len(self.engine_list+self.rakip_list) <9: #0,1,2...8 len > 1,2,3..9
                     done = False   
                     reward = 0
-            else:
-                done = True
-                reward = self.BERABERE
+                else:
+                    done = True
+                    reward = self.BERABERE
 
         
         if self.sıraModeldemi:
