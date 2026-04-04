@@ -24,7 +24,7 @@
 ## 📸 ScreenShot
 |No Start|Player Win|Engine Fork|
 |---|---|---|
-|![Game Screen](ScreenShot/ss1.png) |![Game Screen](ScreenShot/ss2.png) |![Game Screen](ScreenShot/ss3.png)|
+|![Game Screen](ScreenShot/ss.png) |![Game Screen](ScreenShot/ss.png) |![Game Screen](ScreenShot/ss.png)|
 
 ---
 
