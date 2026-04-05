@@ -36,11 +36,11 @@
 
 > ./models/Neural Networks
 ---
-## 🛠️ Windows Build
+## 🛠️ Windows için Derleme adımları
 1. Gereklilikleri yükle: `pip install -r requirements.txt && pip install pyinstaller`
 2. Derleme: `pyinstaller engine.py --onefile --noconsole --add-data "DTZ_icon.ico;." --icon=DTZ_icon.ico --collect-all stable_baselines3 --collect-all torch`
 
-## 🛠️ Linux And MacOS Build
+## 🛠️ Linux ve MacOS için Derleme adımları
 1. Gereklilikleri yükle: `pip install -r requirements.txt && pip install pyinstaller`
 2. Derleme: `pyinstaller engine.py --onefile --noconsole --add-data "DTZ_icon.png:." --icon=DTZ_icon.png --collect-all stable_baselines3 --collect-all torch`
 
